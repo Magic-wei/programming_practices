@@ -22,3 +22,10 @@ add_executable(PID_test_main
         src/PID_test_main.cpp
         )
 
+find_package(PythonLibs 2.7)
+add_executable(matplotlib_test_main
+        src/matplotlib_test_main.cpp
+        src/matplotlib/matplotlibcpp.h
+        )
+target_include_directories(matplotlib_test_main PRIVATE ${PYTHON_INCLUDE_DIRS})
+target_link_libraries(matplotlib_test_main ${PYTHON_LIBRARIES})
