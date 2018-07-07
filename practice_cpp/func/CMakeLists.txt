@@ -29,3 +29,8 @@ add_executable(matplotlib_test_main
         )
 target_include_directories(matplotlib_test_main PRIVATE ${PYTHON_INCLUDE_DIRS})
 target_link_libraries(matplotlib_test_main ${PYTHON_LIBRARIES})
+
+add_executable(template_test_main
+        src/template_test_main.cpp
+#         src/template/template_test.cpp # 如果包含这个文件会报错说redifinition，回头找一下原因
+        )
