@@ -1,8 +1,10 @@
 ## func Introduction
 
-* cost time testing
-* CppAD testing
-* namespace testing
+* cost time test
+* CppAD test
+* namespace test
 * Eigen testing and nan, inf judgment
-* PID testing
+* PID test
+* matplotlib test
+* template using examples
 
