@@ -41,3 +41,8 @@ add_executable(template_test_main
         src/template_test_main.cpp
 #         src/template/template_test.cpp # 如果包含这个文件会报错说redifinition，回头找一下原因
         )
+
+#
+add_executable(STL_test_main
+        src/STL_test_main.cpp
+        )
