@@ -112,6 +112,22 @@ int main(){
     for (const auto &pair : word_map) {
         std::cout << pair.second << " occurrences of word '" << pair.first << "'\n";
     }
+    auto search = word_map.find("not"); // search for an element, must exactly the same as the element
+    if (search != word_map.end()) {
+        std::cout << "Found " << search->first << " " << search->second << '\n';
+    } else {
+        std::cout << "Not found\n";
+    }
+    word_map.size();
+    word_map.empty();
+    word_map.erase("not"); // delete one element
+    search = word_map.find("not"); // search for an element, must exactly the same as the element
+    if (search != word_map.end()) {
+        std::cout << "Found " << search->first << " " << search->second << '\n';
+    } else {
+        std::cout << "Not found\n";
+    }
+    word_map.clear();
 
     // unordered_map
     unordered_map<std::string, std::string> u = { {"RED","#FF0000"},
@@ -120,7 +136,6 @@ int main(){
     u["WHITE"] = "#FFFFFF";
     std::cout << "The HEX of color RED is:[" << u["RED"] << "]\n";
     std::cout << "The HEX of color BLACK is:[" << u["BLACK"] << "]\n";
-
 
     /** Algorithms
      *
