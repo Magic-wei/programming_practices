@@ -23,8 +23,13 @@ add_executable(CppAD_test_main
         )
 
 # Eigen_nan2inf_main
-add_executable(Eigen_nan2inf_main
-        src/Eigen_nan2inf_main.cpp
+add_executable(Eigen_test_main
+        src/Eigen_test_main.cpp
+        )
+
+# nan2inf_test_main
+add_executable(nan2inf_test_main
+        src/nan2inf_test_main.cpp
         )
 
 # PID_test_main
