@@ -56,3 +56,9 @@ add_executable(template_test_main
 add_executable(STL_test_main
         src/STL_test_main.cpp
         )
+
+# hello_world_test_main
+add_executable(hello_world_test_main
+        src/hello_world_test_main.cpp
+        src/hello_world/hello_world.cpp
+        )
