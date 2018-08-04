@@ -10,14 +10,14 @@ namespace test{ // namespace declaration is better used in header files, here is
     int double2int(double val){
         return int(val);
     }
-}
+} // namespace test
 
 namespace test2 {
 
     void display(){
         cout<<"Hello world from namespace test2."<<endl;
     }
-}
+} // namespace test2
 
 using test2::display; // here we declare an alternative using style
 
@@ -32,5 +32,5 @@ int main() {
     // But you can still use the style initial_::cout or std::cout.
     initial_::cout<<"But you can still use the style std::cout"<<std::endl;
     return 0;
-}
+} // main
 
