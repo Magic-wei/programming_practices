@@ -14,7 +14,10 @@ int main(){
         test.sayhello();
     }
     int count = test.getCount(); // let's see how many times we use sayhello() function
-    std::cout << count << std::endl;
-    // we want to achieve this function from a class
+    std::cout << "count before set zero: " << count << std::endl;
+    test.setCountZero();
+    count = test.getCount();
+    std::cout << "count after set zero: " << count << std::endl;
+
     return 0;
 }

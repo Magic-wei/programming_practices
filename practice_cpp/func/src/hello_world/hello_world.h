@@ -12,6 +12,7 @@ public:
     ~hello_world();
     void sayhello();
     int getCount();
+    void setCountZero();
 private:
     int count; // member variable
 };

@@ -23,3 +23,7 @@ void hello_world::sayhello(){
 int hello_world::getCount(){
     return count;
 }
+
+void hello_world::setCountZero(){
+    count = 0;
+}
