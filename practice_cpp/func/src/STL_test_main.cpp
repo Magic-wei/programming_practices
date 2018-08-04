@@ -14,6 +14,14 @@
 
 using namespace std;
 
+template <typename T>
+void exportlist(list<T> msg){
+    cout  << "size: " << msg.size() << ", ";
+    for (auto j : msg) {
+        cout << j << " ";
+    }
+    cout  << "\n";
+}
 
 int main(){
 
@@ -85,6 +93,27 @@ int main(){
     }
     cout << "\n";
 
+    // list - more execises
+    list<double> list_1(10,1.0);
+    list_1.push_back(3.0);
+    list_1.push_back(4.0);
+    for (int i = 0; i < 5; ++i) {
+        list_1.push_back(i*0.5);
+        list_1.push_front(i*0.5);
+    }
+    cout << list_1.back() << "\n";
+    cout << list_1.size() << "\n";
+    list_1.unique(); // remove duplicates
+    cout << list_1.size() << "\n";
+    exportlist<double>(list_1);
+    list_1.remove(1.0);
+    exportlist<double>(list_1);
+    cout << list_1.size() << "\n";
+    for (auto it = list_1.begin(); it != list_1.end() ; ++it) {
+        list_1.pop_back();
+        exportlist<double>(list_1);
+    }
+
     /** Containers - Part Two
      *  pair, map, unordered_map
      */
@@ -105,11 +134,15 @@ int main(){
         // count the number of occurrences of each word
         // (the first call to operator[] initialized the counter with zero)
     std::map<std::string, size_t>  word_map;
-    for (const auto &w : { "this", "sentence", "is", "not", "a", "sentence",
-                           "this", "sentence", "is", "a", "hoax"}) {
+    vector<std::string> words;
+    words = { "this", "sentence", "is", "not", "a", "sentence",
+              "this", "sentence", "is", "a", "hoax"};
+    string temp_word = (string)"this" + "name"; // at least one must be string type! if direct use: temp_word = "this" + "name", error will occur!
+    words.push_back(temp_word);
+    for (const auto &w : words) { // recommend this way of writing
         ++word_map[w];
     }
-    for (const auto &pair : word_map) {
+    for (const auto &pair : word_map) { // you may find it is a sorted struct
         std::cout << pair.second << " occurrences of word '" << pair.first << "'\n";
     }
     auto search = word_map.find("not"); // search for an element, must exactly the same as the element
