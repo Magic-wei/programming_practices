@@ -3,6 +3,11 @@ project(func_test)
 
 set(CMAKE_CXX_STANDARD 11)
 
+# temp_test
+add_executable(temp_test
+        src/temp_test.cpp
+        )
+
 # namespace_main
 set(SOURCE_FILES src/namespace_main.cpp)
 add_executable(namespace_main ${SOURCE_FILES})
