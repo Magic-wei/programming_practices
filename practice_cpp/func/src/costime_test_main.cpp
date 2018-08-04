@@ -24,6 +24,7 @@ double getPreviewHorizon(double PGC){
 
 int main() {
 
+    // Calculate time cost of some codes.
     double time_in = getCurrentTime();
     cout<<"time_in: "<<time_in<<"\n";
 
@@ -44,7 +45,7 @@ int main() {
     double time_out = getCurrentTime();
     cout<<"time_out: "<<time_out<<"\n";
 
-    double cost = time_out - time_in;
+    double cost = time_out - time_in; // here, we can get the final time cost, in unit second.
     cout<<"time cost: "<<cost<<"\n";
 
     return 0;
