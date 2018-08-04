@@ -8,12 +8,12 @@
 
 class hello_world {
 public:
-    hello_world(); // 成员函数
+    hello_world(); // member function
     ~hello_world();
     void sayhello();
     int getCount();
 private:
-    int count; // 成员变量
+    int count; // member variable
 };
 
 
