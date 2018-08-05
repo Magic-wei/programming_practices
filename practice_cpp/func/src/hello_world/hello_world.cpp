@@ -24,6 +24,6 @@ int hello_world::getCount(){
     return count;
 }
 
-void hello_world::setCountZero(){
-    count = 0;
+void hello_world::setCountZero(int new_count) {
+    count = new_count;
 }
