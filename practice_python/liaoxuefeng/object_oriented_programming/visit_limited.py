@@ -3,7 +3,7 @@
 
 # visit limited
 # add '__' before an attribute's name, like '__name', '__score', you cannot directly visit them
-# but for forms like '_name' , you can still directly visit them, which is not recommended.
+# but for forms like '_name' , you can still directly visit them, where it is not recommended.
 
 class Student:
     def __init__(self,name,score):

@@ -36,7 +36,7 @@ print(type(lambda x:x))
 print(type((x for x in range(10))))
 print(type([x for x in range(10)]))
 
-print(type(fn) == types.FunctionType)
+print('Is fn() a FunctionType? ', type(fn) == types.FunctionType)
 print('Is abs a FunctionType? ',type(abs) == types.FunctionType)
 print('Is abs a BuiltinFunctionType? ',type(abs) == types.BuiltinFunctionType)
 print('Is lambda x:x a FunctionType? ',type(lambda x:x) == types.FunctionType)
@@ -71,7 +71,7 @@ print(hasattr(obj, 'y') ) # have attribute 'y'?
 print(getattr(obj, 'y') ) # get the value of attribute 'y'
 print(getattr(obj, 'z', 404)) # if we get a nonexistent attribute 'z', we will get AttributeError, but we can set a default return value 404 when this kind of error arises. If don't, you will get AttributeError returned.
 
-## we can also use dir() function to get information of methods in a class:
+## we can also use hasattr function to get information of methods in a class:
 print(hasattr(obj, 'power')) # have method 'power'?
 
 ## the right way to use these function is like following example:
