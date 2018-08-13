@@ -1,0 +1,4 @@
+Name: XXXX
+Age: 32
+JoinDate: 2018/04/02
+Interests: music, games

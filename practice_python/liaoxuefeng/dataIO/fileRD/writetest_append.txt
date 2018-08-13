@@ -1,0 +1,10 @@
+Write to file: Hello, world!
+Write to file: Hello, world!
+Write to file: Hello, world!
+Write to file: Hello, world!
+Write to file: Hello, world!
+Write to file: Hello, world!
+Write to file: Hello, world!
+Write to file: Hello, world!
+Write to file: Hello, world!
+Write to file: Hello, world!
