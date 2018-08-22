@@ -62,3 +62,8 @@ add_executable(hello_world_test_main
         src/hello_world_test_main.cpp
         src/hello_world/hello_world.cpp
         )
+
+# file_ReadWrite_main
+add_executable(file_ReadWrite_main
+        src/file_ReadWrite_main.cpp
+)
