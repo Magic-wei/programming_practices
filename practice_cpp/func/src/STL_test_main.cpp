@@ -28,9 +28,10 @@ int main(){
     /** iterator
      *  Usage: vector<int>::iterator -OR- auto ...
      */
-    vector<int> int_vec(10,1);
+    vector<int> int_vec(10,0);
     for (vector<int>::iterator it_Int = int_vec.begin();it_Int!=int_vec.end(); ++it_Int) {
         *it_Int += it_Int - int_vec.begin();
+        cout << it_Int - int_vec.begin() << " ";
         cout << *it_Int << " ";
     }
     cout << "\n";
