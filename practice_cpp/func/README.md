@@ -7,6 +7,7 @@
 * [nan, inf judgment](./src/nan2inf_test_main.cpp)
 * [template using examples](./src/template_test_main.cpp)
 * [STL container, iterator and algorithms exploration](./src/STL_test_main.cpp)
+* [file Reading and Writing](./src/file_ReadWrite_main.cpp)
 
 ### third-party libraries test
 
