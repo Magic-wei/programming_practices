@@ -39,7 +39,7 @@ def student2dict(std):
 
 s = Student('Bob', 20, 88)
 # 自定义转换方式，Student实例首先被student2dict()函数转换成dict，然后再被顺利序列化为JSON
-print(json.dumps(s,default=student2dict)) 
+print(json.dumps(s, default=student2dict))
 
 # 不过，下次如果遇到一个Teacher类的实例，照样无法序列化为JSON。我们可以偷个懒，把任意class的实例变为dict。因为通常class的实例都有一个__dict__属性，它就是一个dict，用来存储实例变量。也有少数例外，比如定义了__slots__的class。
 print(json.dumps(s, default=lambda obj: obj.__dict__))
