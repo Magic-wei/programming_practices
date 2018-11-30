@@ -1,6 +1,6 @@
 ## codecogs
 <img src="https://latex.codecogs.com/gif.latex?\hat{x}=argmin(|Ax&space;=&space;b|^2)\&space;s.t.\&space;Cx&space;=&space;d" title="\hat{x}=argmin(|Ax = b|^2)\ s.t.\ Cx = d" />
-<img src="http://latex.codecogs.com/gif.latex? x+a" />
+<img src="http://latex.codecogs.com/gif.latex?x+a" />
 
 ## mathjax
 <script type="text/javascript"
