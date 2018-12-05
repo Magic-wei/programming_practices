@@ -6,21 +6,10 @@
 #include <vector>
 #include "stdio.h"
 #include "iostream"
-#include <math.h>
+#include <cmath>
 
 using namespace std;
 using namespace Eigen;
-
-// declaration
-Eigen::VectorXd polyfit(const Eigen::VectorXd& xvals, const Eigen::VectorXd& yvals, int order);
-void test_Eigen();
-
-int main(){
-    std::vector<double> a = {1,2};
-    cout<<a[0]<<endl;
-    test_Eigen();
-    return 0;
-}
 
 Eigen::VectorXd polyfit(const Eigen::VectorXd& xvals, const Eigen::VectorXd& yvals, int order) {
     assert(xvals.size() == yvals.size());
@@ -90,4 +79,21 @@ void test_Eigen(){
     std::cout<<LocalPathy1<<std::endl;
     wayPtPolynomialCoeffs = polyfit(LocalPathx1,LocalPathy1,3);
     cout<<"wayPtPolynomialCoeffs is \n"<<wayPtPolynomialCoeffs<<endl;
+}
+
+void cross_product_test(){
+    Eigen::Vector3f v1, v2, v3;
+    v1 << 2.0, 5.0, 0;
+    v2 << 3.0, 7.0, 0;
+    v3 = v1.cross(v2);
+    std::cout << v3 << "\n"; // cross can only be used for 3D vectors.
+    std::cout << "The scalar value of 2D vector cross product is " << v1(0)*v2(1) - v1(1)*v2(0) << "\n";
+}
+
+int main(){
+    std::vector<double> a = {1,2};
+    cout<<a[0]<<endl;
+    test_Eigen();
+    cross_product_test();
+    return 0;
 }
