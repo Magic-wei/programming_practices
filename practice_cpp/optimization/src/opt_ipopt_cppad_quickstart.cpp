@@ -6,5 +6,5 @@
 #include <iostream>
 
 int main(){
-    std::cout << quickstart::get_started() << "\n";
+    std::cout << cppad_ipopt_quickstart::solve() << "\n";
 }
