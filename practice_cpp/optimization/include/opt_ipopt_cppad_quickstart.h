@@ -50,8 +50,6 @@ public:
         fg[1] = x1 - x2 * x3;
         // g(x)[1]
         fg[2] = x1 * (x2 + x3);
-        //
-        return;
     }
 };
 
@@ -76,13 +74,11 @@ public:
         fg[3] = x2;
         // g(x)[3]
         fg[4] = x3;
-        return;
     }
 };
 
-bool solve(void) {
+bool solve() {
     bool ok = true;
-    size_t i;
     typedef CPPAD_TESTVECTOR(double) Dvector;
 
     /* setting #1 */
@@ -115,9 +111,9 @@ bool solve(void) {
     xi[0] = 0.0; xi[1] = 0.0; xi[2] = 0.0;
     // lower and upper limits for x
     Dvector xl2(nx), xu2(nx);
-    for(int i = 0; i < nx2; ++i){
-        xl2[i] = -10e9;
-        xu2[i] = 10e9;
+    for(size_t j = 0; j < nx2; ++j){
+        xl2[j] = -10e9;
+        xu2[j] = 10e9;
     }
     // lower and upper limits for g
     Dvector gl2(ng2), gu2(ng2);
@@ -176,7 +172,7 @@ bool solve(void) {
     std::cout << "solution1: " << solution2.status << " " << solution2.x << " f(x): " << solution2.obj_value << " g(x): " << solution2.g << "\n";
     double rel_tol = 1e-6;  // relative tolerance
     double abs_tol = 1e-6;  // absolute tolerance
-    for (i = 0; i < nx; i++) {
+    for (size_t i = 0; i < nx; i++) {
         ok &= CppAD::NearEqual(
                 solution.x[i], solution2.x[i], rel_tol, abs_tol
         );
