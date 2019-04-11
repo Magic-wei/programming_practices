@@ -169,7 +169,7 @@ bool solve() {
     ok &= solution2.status == CppAD::ipopt::solve_result<Dvector>::success;
     //
     std::cout << "solution1: " << solution.status << " " << solution.x << " f(x): " << solution.obj_value << " g(x): " << solution.g << "\n";
-    std::cout << "solution1: " << solution2.status << " " << solution2.x << " f(x): " << solution2.obj_value << " g(x): " << solution2.g << "\n";
+    std::cout << "solution2: " << solution2.status << " " << solution2.x << " f(x): " << solution2.obj_value << " g(x): " << solution2.g << "\n";
     double rel_tol = 1e-6;  // relative tolerance
     double abs_tol = 1e-6;  // absolute tolerance
     for (size_t i = 0; i < nx; i++) {
