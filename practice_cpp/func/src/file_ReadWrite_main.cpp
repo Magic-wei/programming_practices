@@ -72,5 +72,10 @@ int main(){
         cout << "\n";
     }
 
+    fstream f;
+    f.open("../data/output.txt",ios::out);
+    char trim_character = ' ';
+    f << 0.2 << trim_character << 132 << trim_character << "string";
+    f.close();
     return 0;
 }
