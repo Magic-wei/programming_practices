@@ -67,3 +67,8 @@ add_executable(hello_world_test_main
 add_executable(file_ReadWrite_main
         src/file_ReadWrite_main.cpp
 )
+
+# make_shared_main
+add_executable(make_shared_main
+        src/make_shared_main.cpp
+        )
