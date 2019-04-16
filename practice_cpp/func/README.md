@@ -8,6 +8,7 @@
 * [template using examples](./src/template_test_main.cpp)
 * [STL container, iterator and algorithms exploration](./src/STL_test_main.cpp)
 * [file Reading and Writing](./src/file_ReadWrite_main.cpp)
+* [shared pointer](./src/make_shared_main.cpp)
 
 ### third-party libraries test
 
