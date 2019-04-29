@@ -1,6 +1,6 @@
 %% Symbol Calculation
 % Author: Wei Wang
-% Date: 02/27/2019
+% Date: 04/29/2019
 % =======================================
 
 n = 10;
@@ -16,6 +16,10 @@ disp(c)
 for k=1:n
 	eval(['a' num2str(k) '=sym(''a' num2str(k) ''')']);
 end
+
+% the third batch approach
+Matrix = sym('A',[3,4])
+Matrix2 = sym('x_%d_%d', 4)
 
 % matrix
 A = sym('[a,b;c,d]');
@@ -39,7 +43,7 @@ I = eye(n);
 R = [1,0,0;
      1,1,0;
      0,1,1];
-R = sym(R);
+R = sym(R)
 M = kron(R,I);
 disp(M)
 
@@ -53,3 +57,66 @@ for k = 1:len
 	end
 end
 disp(M)
+
+% repmat function
+D = repmat(R,2,3);
+disp(D)
+S = repmat('What a wonderful day!',2,3);
+disp(S)
+N = repmat(NaN,2,3);
+disp(N)
+
+% transform to numerical calculation
+a = 0; b = 0; c = 1; d = 0;
+subs(A)
+subs(B) % no error report if not given values of these variables
+
+syms x
+f = x^3 - 15*x^2 - 24*x + 350;
+A1 = [1 2 3; 4 5 6];
+subs(f,A1)
+
+% transpose, det, rank
+transpose(A)
+det(A)
+rank(A)
+rank(subs(A))
+
+% Create Symbolic Numbers
+inaccurate1 = sym(1/1234567)
+accurate1 = 1/sym(1234567)
+
+inaccurate2 = sym(sqrt(1234567))
+accurate2 = sqrt(sym(1234567))
+
+inaccurate3 = sym(exp(pi))
+accurate3 = exp(sym(pi))
+
+% Create Large Symbolic Numbers
+inaccurateNum = sym(11111111111111111111)
+accurateNum = sym('11111111111111111111')
+sym('1234567 + 1i')
+
+% Create Symbolic Expressions from Function Handles
+h_expr = @(x)(sin(x) + cos(x));
+sym_expr = sym(h_expr)
+
+h_matrix = @(x)(x*pascal(3));
+sym_matrix = sym(h_matrix)
+
+% Set Assumptions While Creating Variables
+x = sym('x','real');
+y = sym('y','positive');
+z = sym('z','integer');
+t = sym('t','rational');
+
+assumptions % Check the assumptions on x, y, and z using assumptions.
+
+assume([x y z t],'clear')
+assumptions
+
+% Set Assumptions on Matrix Elements
+A = sym('A%d%d',[2 2],'positive')
+assumptions(A)
+assume(A,'clear');
+assumptions(A)
