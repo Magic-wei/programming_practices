@@ -18,22 +18,22 @@ void textReadAll(string& file, size_t col_num, std::vector<std::vector<data_type
 
     f.open(file, ios::in);
 
-    //文件打开方式选项：
-    //　ios::in　　　　= 0x01,　//供读，文件不存在则创建(ifstream默认的打开方式)
-    //　ios::out　　　 = 0x02,　//供写，文件不存在则创建，若文件已存在则清空原内容(ofstream默认的打开方式)
-    //　ios::ate　　　 = 0x04,　//文件打开时，指针在文件最后。可改变指针的位置，常和in、out联合使用
-    //　ios::app　　　 = 0x08,　//供写，文件不存在则创建，若文件已存在则在原文件内容后写入新的内容，指针位置总在最后
-    //　ios::trunc　　 = 0x10,　//在读写前先将文件长度截断为0（默认）
-    //　ios::nocreate　= 0x20,　//文件不存在时产生错误，常和in或app联合使用
-    //　ios::noreplace = 0x40,　//文件存在时产生错误，常和out联合使用
-    //　ios::binary　　= 0x80　 //二进制格式文件
+    // open_mode is a integer-type number, here is a list:
+
+    // ios::in　　　　= 0x01,　// read, create new file if not exist (ifstream default mode).
+    // ios::out　　　 = 0x02,　// write (overwrite when file exist), create new file if not exist (ofstream default mode).
+    // ios::ate　　　 = 0x04,　// put the pointer at the end of the file when opened. The pointer can be changed, usually used along with ios::in and ios::out.
+    // ios::app　　　 = 0x08,　//write (append), create new file if not exist, the pointer is always at the end of the opened file.
+    // ios::trunc　　 = 0x10,　// any current content is discarded, assuming a length of zero on opening.
+    // ios::nocreate　= 0x20,　// return error when file doesn't exist, usually used along with ios::in and ios::app.
+    // ios::noreplace = 0x40,　// return error when file exist, usually used along with ios::out.
+    // ios::binary　　= 0x80　 // open file in binary format.
 
     if (!f) {
-        cout << "打开文件出错" << endl;
+        cout << "failed to open file!" << endl;
         return;
     }
 
-    //如果知道数据格式，可以直接用>>读入
     data.clear();
 
     double tmp[col_num];
@@ -49,9 +49,10 @@ void textReadAll(string& file, size_t col_num, std::vector<std::vector<data_type
 }
 
 int main(){
-    const char* file_name = "../data/file_ReadWrite_data.txt"; // file path
+    // read from file
+    const char* file_name = "../data/file_ReadWrite/file_ReadWrite_data.txt"; // file path
     char abs_path_buff[PATH_MAX];
-    //realpath函数返回: null表示获取失败; 否则返回指向abs_path_buff的指针
+    //realpath returns the absolute path; null - failed, otherwise return ptr of abs_path_buff.
     if(realpath(file_name, abs_path_buff)){
         printf("%s\n", abs_path_buff);
     }
@@ -72,8 +73,9 @@ int main(){
         cout << "\n";
     }
 
+    // write to file
     fstream f;
-    f.open("../data/output.txt",ios::out);
+    f.open("../data/file_ReadWrite/output.txt",ios::out);
     char trim_character = ' ';
     f << 0.2 << trim_character << 132 << trim_character << "string";
     f.close();
