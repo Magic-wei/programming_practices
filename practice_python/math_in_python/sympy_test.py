@@ -1,6 +1,14 @@
 #! /usr/bin/env python
 # -*- coding = utf-8 -*-
 
+'''
+---------------------------------
+ SymPy Test
+ Author: Wei Wang
+ Date: 05/15/2019
+---------------------------------
+'''
+
 from sympy import *
 
 # Beautiful Printing
