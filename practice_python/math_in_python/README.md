@@ -21,7 +21,7 @@
   - [x] plotting of functions, find the intersection point
   - [ ] 矩阵符号运算
 
-* CVXPY
+* [CVXPY](https://www.cvxpy.org/tutorial/intro/index.html)
   - [x] constraints definition
   - [x] variables definition
   - [x] parameters definition
