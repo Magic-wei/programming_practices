@@ -20,3 +20,11 @@
   - [x] 矩阵：Matrix([[...],[...]]), 特征值，特征向量，特征分解
   - [x] plotting of functions, find the intersection point
   - [ ] 矩阵符号运算
+
+* CVXPY
+  - [x] constraints definition
+  - [x] variables definition
+  - [x] parameters definition
+  - [x] problem setting
+  - [x] parallel solving
+  - [ ] practices on real problems
