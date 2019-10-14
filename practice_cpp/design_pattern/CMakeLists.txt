@@ -32,3 +32,8 @@ add_executable(${PROJECT_NAME}_factory_map
 add_executable(${PROJECT_NAME}_observer
         src/primary/observer.cpp
         )
+
+# template_method
+add_executable(${PROJECT_NAME}_template_method
+        src/primary/template_method.cpp
+        )

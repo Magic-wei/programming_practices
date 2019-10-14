@@ -10,6 +10,7 @@
 * [factory](./src/primary/factory.cpp)
 * [factory_map](./src/primary/factory_map.cpp)
 * [observer](./src/primary/observer.cpp)
+* [template_method](./src/primary/template_method.cpp)
 
 ### Reference
 
