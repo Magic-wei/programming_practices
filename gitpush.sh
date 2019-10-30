@@ -3,7 +3,7 @@ set -e # exit on first error
 
 push_to_github(){
   echo "push to github ..."
-  git push github master
+  git push origin master
 }
 
 push_to_gitee(){
