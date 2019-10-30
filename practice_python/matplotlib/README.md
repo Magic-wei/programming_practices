@@ -24,6 +24,7 @@ Some practical codes are downloaded from official website for further study and 
   - [x] use transformation in data and axes coordinates
   - [x] add subplot using `fig = plt.figure()` and `ax = fig.add_subplot(111)`
   - [x] add subplot using gridspec
+  - [x] init subplot and plot each single one
   - [x] basic text
   - [ ] advanced text
   - [x] interesting randomized equation images

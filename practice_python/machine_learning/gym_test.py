@@ -1,4 +1,4 @@
-#! /usr/bin/env python3
+#! /usr/bin/env python
 # -*- coding = utf-8 -*-
 
 """ this is origin codes by OpenAI manuals
@@ -18,7 +18,7 @@ for i_episode in range(20):
 
 import gym
 env = gym.make('CartPole-v0')
-iter_num = 50;
+iter_num = 50
 for i_episode in range(iter_num):
     observation = env.reset()
     for t in range(100):
