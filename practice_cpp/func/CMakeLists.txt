@@ -72,3 +72,13 @@ add_executable(file_ReadWrite_main
 add_executable(make_shared_main
         src/make_shared_main.cpp
         )
+
+# derived_class_test_main
+add_executable(derived_class_test_main
+        src/derived_class_test_main.cpp
+        )
+
+# color_test_main
+add_executable(color_test_main
+        src/color_test_main.cpp
+        )
